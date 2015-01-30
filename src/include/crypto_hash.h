@@ -37,11 +37,11 @@ extern "C" {
 
 typedef enum _chasherr_t {
 	HASH_ERR_NONE = 0,
-	HASH_ERR_INVARG,
+	HASH_ERR_INVALID_ARG,
 	HASH_ERR_ALLOC,
 } chasherr_t;
 
-#define HASH_ERR_MAX HASH_ERR_INVARG
+#define HASH_ERR_MAX HASH_ERR_ALLOC
 #define HASH_SUCCESS(_ERR_) ((_ERR_) == HASH_ERR_NONE)
 #define HASH_FAILURE(_ERR_) (!HASH_SUCCESS(_ERR_))
 

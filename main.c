@@ -21,10 +21,6 @@
 #include <string.h>
 #include "src/include/crypto_hash.h"
 
-#define BITS_PER_BYTE 0x8
-#define BLOCK_LEN 0x10
-#define BYTES_PER_KBYTE (1024.0)
-
 #define HEADER_DEF "INPUT"
 #define HEADER_MD5 "MD5"
 #define HEADER_SHA256 "SHA256"

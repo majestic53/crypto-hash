@@ -25,7 +25,7 @@
 
 #define VERSION_MAJ 1
 #define VERSION_MIN 0
-#define VERSION_REV 1
+#define VERSION_REV 2
 #define VERSION_WEEK 1505
 
 #define _STRING_CAT(_STR_) # _STR_
@@ -117,7 +117,7 @@ crypto_hash_md5(
 	size_t block_count, block_iter = 0, byte_count, byte_iter, ch_iter = 0;
 
 	if(!digest) {
-		result = HASH_ERR_INVARG;
+		result = HASH_ERR_INVALID_ARG;
 		goto exit;
 	}
 
@@ -258,7 +258,7 @@ crypto_hash_sha256(
 	uint32_t a, a0, b, b0, c, c0, ch, d, d0, e, e0, f, f0, g, g0, h, h0, maj, s0, s1, tmp0, tmp1;
 
 	if(!digest) {
-		result = HASH_ERR_INVARG;
+		result = HASH_ERR_INVALID_ARG;
 		goto exit;
 	}
 
@@ -445,7 +445,7 @@ crypto_hash_sha512(
 	uint64_t a, a0, b, b0, c, c0, ch, d, d0, e, e0, f, f0, g, g0, h, h0, maj, s0, s1, tmp0, tmp1;
 
 	if(!digest) {
-		result = HASH_ERR_INVARG;
+		result = HASH_ERR_INVALID_ARG;
 		goto exit;
 	}
 
